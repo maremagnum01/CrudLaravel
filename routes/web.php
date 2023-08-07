@@ -16,9 +16,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TaskController::class, 'index']);
 //con resource aclaramos que se va a conectar a un controlador de recursos
 //la url sera tasks 
 //y el controlador de recursos sera TaskController::class

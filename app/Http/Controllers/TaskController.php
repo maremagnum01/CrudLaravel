@@ -15,6 +15,7 @@ class TaskController extends Controller
     public function index(): View
     {
         //Aqui pedimos que nos muestre el index
+        //y agregamos un paginador
         
         $tasks = Task::latest()->paginate(3);
         return view('index', ['tasks' => $tasks]);
